@@ -40,6 +40,17 @@ python3 -I scripts/devlog.py <repo path> <Name> [sent-pictures.json]
 It prints the days, pictures and items it wrote, and any line that breaks STYLE.md's mechanical
 rules.
 
+## A workflow run
+
+`scripts/run.py` reads a GitHub Actions run through `gh api`, so the login `gh` holds serves. It
+prints the run's jobs with their conclusions and times and, for each job that failed, timed out or
+was cancelled, the step it stopped at and the annotations of its check run. The last 60 lines of
+that step go to a file in the folder given, whose path it prints, and never to the terminal.
+
+```bash
+python3 -I scripts/run.py <account/repo> <run id> <folder for the logs>
+```
+
 ## Building and testing
 
 With the .NET 10 SDK:

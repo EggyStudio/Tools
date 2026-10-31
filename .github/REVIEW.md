@@ -1,16 +1,21 @@
 # Review
 
 Reviewed up to `13c8202`, item 2, pushed at 12:31 on 2026-10-31 with `e28b3b4`, item 1, after the
-owner's first commit, its run awaited, the first of this repository. Both commits keep the form, the
-three-mark subject, one sentence, the owner's identity as author and committer, no trailer (N 7.2
-and N 7.6 kept at the first commit); the library references no engine (N 2.1). The documents are the
-engines' with the engine's name replaced and the engine-only lines dropped, COMMITS.md the game's
-with N 7.1's pointer rule in place of the legacy branch line, .gitignore with the dump folder,
-.claude and .ref; AGENTS.md's devlog row carries no link until DEVLOG.md exists and its table of
-areas gains the rows item 2 adds. The skeleton sets ImportDirectoryBuildTargets false, since a
-submodule under modules/ would inherit an engine's Directory.Build.targets, makes a missing summary
-an error, loads the assembly by name in its one test, and build/version.sh prints 0.1.0; the strict
-build 0 warnings and 0 errors, the test passing. Before it `2340033`, the license alone, the
+owner's first commit, its run green at 12:32, the first of this repository. After it `7532128`, item
+3's first part, the devlog generator, pushed at 12:35, its run green at 12:35 as well;
+scripts/devlog.py as the reviewing session's byte for byte, the README saying how a repository runs
+it, DevlogTests making a one-commit scratch repository with git's identity given on the command line
+and reading the Done line the script writes, Python found as python3 or python and the test skipped
+with its reason where neither runs; 2 of 2 tests, the strict build clean. Both commits keep the
+form, the three-mark subject, one sentence, the owner's identity as author and committer, no trailer
+(N 7.2 and N 7.6 kept at the first commit); the library references no engine (N 2.1). The documents
+are the engines' with the engine's name replaced and the engine-only lines dropped, COMMITS.md the
+game's with N 7.1's pointer rule in place of the legacy branch line, .gitignore with the dump
+folder, .claude and .ref; AGENTS.md's devlog row carries no link until DEVLOG.md exists and its
+table of areas gains the rows item 2 adds. The skeleton sets ImportDirectoryBuildTargets false,
+since a submodule under modules/ would inherit an engine's Directory.Build.targets, makes a missing
+summary an error, loads the assembly by name in its one test, and build/version.sh prints 0.1.0; the
+strict build 0 warnings and 0 errors, the test passing. Before it `2340033`, the license alone, the
 owner's.
 
 ## Now
@@ -44,10 +49,12 @@ and every repository gains from it at once.
     engines' concurrency group. Green on the three systems before item 3. Done at `13c8202`.
 
 3. **The code's move.** The source is the reviewing session's devlog.py and run reader, the engine
-sessions' scripts, and the documents as they stand in the engines; each repository then carries a
-copy its build checks against the source. One commit a part, the tests coming with the code, the
-strict build and the suite green, a Shared line in the engines' REVIEW.md when a part lands. Items
-written by the reviewing session when item 2 is green and the owning session is free.
+    sessions' scripts, and the documents as they stand in the engines; each repository then carries
+    a copy its build checks against the source. One commit a part, the tests coming with the code,
+    the strict build and the suite green, a Shared line in the engines' REVIEW.md when a part lands.
+    Items written by the reviewing session when item 2 is green and the owning session is free.
+    First part done at `7532128`, the devlog generator with its test; the run reader and the sheet
+    composer are the parts left.
 
 4. **The engines take the module.** Each engine adds this repository as a git submodule under
 `modules/` and references its project, its workflows checking submodules out, its own folder for

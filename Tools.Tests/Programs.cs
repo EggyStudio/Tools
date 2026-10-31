@@ -23,14 +23,20 @@ public static class Programs
     public static readonly Lazy<string?> Python = new(() => new[] { "python3", "python" }.FirstOrDefault(Runs));
 
     /// <summary>Runs a script copied beside the tests with Python's isolated mode, as a repository runs it, and returns what it printed.</summary>
-    public static string Script(string name, params string[] arguments) =>
-        Run(Python.Value!, AppContext.BaseDirectory, ["-I", Path.Combine(AppContext.BaseDirectory, "scripts", name), .. arguments]);
+    public static string Script(string name, params string[] arguments) => Script(name, [], arguments);
+
+    /// <summary>Runs a script as <see cref="Script(string, string[])"/> does, with variables set in its environment.</summary>
+    public static string Script(string name, Dictionary<string, string> environment, params string[] arguments) =>
+        Run(Python.Value!, AppContext.BaseDirectory, environment, ["-I", Path.Combine(AppContext.BaseDirectory, "scripts", name), .. arguments]);
 
     /// <summary>Runs a program in a folder and returns what it printed, failing the test where it exits with an error.</summary>
-    public static string Run(string program, string folder, params string[] arguments)
+    public static string Run(string program, string folder, params string[] arguments) => Run(program, folder, [], arguments);
+
+    private static string Run(string program, string folder, Dictionary<string, string> environment, string[] arguments)
     {
         var start = new ProcessStartInfo(program) { WorkingDirectory = folder, RedirectStandardOutput = true, RedirectStandardError = true };
         foreach (var argument in arguments) start.ArgumentList.Add(argument);
+        foreach (var (key, value) in environment) start.Environment[key] = value;
         using var process = Process.Start(start)!;
         var error = process.StandardError.ReadToEndAsync();
         var output = process.StandardOutput.ReadToEnd();
