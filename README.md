@@ -24,6 +24,22 @@ A clone of the engine fetches the module with `git clone --recurse-submodules`, 
 before the engine's commit that moves its pointer, so the engine's history never names a commit
 this repository does not have.
 
+## The devlog
+
+`scripts/devlog.py` writes a repository's `DEVLOG.md`, what landed by day and newest first. It
+takes the pictures under `.github/devlog` or `.github/assets/readings` with their captions and the
+notes beside them, the captures under `.github/assets`, and the items of `.github/REVIEW.md` and
+`.github/REVIEW-ARCHIVE.md` marked done, each on the day of the commit that closed it. A repository
+runs it with its path and its name, and with a list of the pictures sent on the way where it keeps
+one, which needs Pillow to save them as WebP.
+
+```bash
+python3 -I scripts/devlog.py <repo path> <Name> [sent-pictures.json]
+```
+
+It prints the days, pictures and items it wrote, and any line that breaks STYLE.md's mechanical
+rules.
+
 ## Building and testing
 
 With the .NET 10 SDK:

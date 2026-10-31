@@ -1,8 +1,17 @@
 # Review
 
-Reviewed up to `2340033`, the repository's first commit, the license alone, made by the owner at
-12:08 on 2026-10-31. Nothing has been pushed by the reviewing session yet; the first push is item
-1's commit, after the previous build run of this repository has ended, which at birth means at once.
+Reviewed up to `13c8202`, item 2, pushed at 12:31 on 2026-10-31 with `e28b3b4`, item 1, after the
+owner's first commit, its run awaited, the first of this repository. Both commits keep the form, the
+three-mark subject, one sentence, the owner's identity as author and committer, no trailer (N 7.2
+and N 7.6 kept at the first commit); the library references no engine (N 2.1). The documents are the
+engines' with the engine's name replaced and the engine-only lines dropped, COMMITS.md the game's
+with N 7.1's pointer rule in place of the legacy branch line, .gitignore with the dump folder,
+.claude and .ref; AGENTS.md's devlog row carries no link until DEVLOG.md exists and its table of
+areas gains the rows item 2 adds. The skeleton sets ImportDirectoryBuildTargets false, since a
+submodule under modules/ would inherit an engine's Directory.Build.targets, makes a missing summary
+an error, loads the assembly by name in its one test, and build/version.sh prints 0.1.0; the strict
+build 0 warnings and 0 errors, the test passing. Before it `2340033`, the license alone, the
+owner's.
 
 ## Now
 
@@ -16,22 +25,23 @@ while the game waits on the engine's package; item 3 is the session's that owns 
 and every repository gains from it at once.
 
 1. **The documents, one commit.** AGENTS.md on the game's shape (one paragraph saying what the
-module is and that no engine is referenced, N 2.1; the documents table with STYLE, COMMITS, REVIEW,
-NORM and DEVLOG; building and testing; Where things are with a row a folder; the conventions, the
-commit form among them), README.md (what the module is, how an engine takes it as a submodule,
-`dotnet build` and `dotnet test`), `.github/STYLE.md`, `COMMITS.md` and `CODE_OF_CONDUCT.md` as the
-engines' with the engine's name replaced, `.gitignore` of the engines' shape with `/.github/dump/`
-in it, `.gitattributes`. The game's AGENTS.md and the engines' documents are the models; nothing is
-written that the module does not have yet. This commit is the first test of the commit form here, N
-7.2 and N 7.6, read by the reviewing session before it is pushed.
+    module is and that no engine is referenced, N 2.1; the documents table with STYLE, COMMITS,
+    REVIEW, NORM and DEVLOG; building and testing; Where things are with a row a folder; the
+    conventions, the commit form among them), README.md (what the module is, how an engine takes it
+    as a submodule, `dotnet build` and `dotnet test`), `.github/STYLE.md`, `COMMITS.md` and
+    `CODE_OF_CONDUCT.md` as the engines' with the engine's name replaced, `.gitignore` of the
+    engines' shape with `/.github/dump/` in it, `.gitattributes`. The game's AGENTS.md and the
+    engines' documents are the models; nothing is written that the module does not have yet. This
+    commit is the first test of the commit form here, N 7.2 and N 7.6, read by the reviewing session
+    before it is pushed. Done at `e28b3b4`.
 
 2. **The skeleton, one commit after item 1.** `Tools.slnx`, `Tools/Tools.csproj` as a class library
-on net10.0 with `Nullable` and `ImplicitUsings` in `Directory.Build.props`, `Tools.Tests/` on xunit
-with one test that the library loads, `build/version.txt` at `0.1` and `build/version.sh` as the
-engines', and `.github/workflows/build.yml` on a push, `test (os)` on ubuntu-24.04, windows-latest
-and macos-15 with `dotnet build Tools.slnx -warnaserror` and `dotnet test Tools.Tests --no-build`, a
-time limit on every job with its reason, `permissions` read and the engines' concurrency group.
-Green on the three systems before item 3.
+    on net10.0 with `Nullable` and `ImplicitUsings` in `Directory.Build.props`, `Tools.Tests/` on
+    xunit with one test that the library loads, `build/version.txt` at `0.1` and `build/version.sh`
+    as the engines', and `.github/workflows/build.yml` on a push, `test (os)` on ubuntu-24.04,
+    windows-latest and macos-15 with `dotnet build Tools.slnx -warnaserror` and `dotnet test
+    Tools.Tests --no-build`, a time limit on every job with its reason, `permissions` read and the
+    engines' concurrency group. Green on the three systems before item 3. Done at `13c8202`.
 
 3. **The code's move.** The source is the reviewing session's devlog.py and run reader, the engine
 sessions' scripts, and the documents as they stand in the engines; each repository then carries a

@@ -10,6 +10,11 @@
         <ProjectReference Include="..\Tools\Tools.csproj" />
     </ItemGroup>
 
+    <!-- The scripts the tests run, copied beside them so a test finds them wherever it runs from. -->
+    <ItemGroup>
+        <None Include="..\scripts\*.py" Link="scripts\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+
     <ItemGroup>
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.5.1" />
         <PackageReference Include="xunit" Version="2.9.3" />
