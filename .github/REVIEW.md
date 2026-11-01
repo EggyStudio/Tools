@@ -6,17 +6,24 @@ owner's first commit, its run green at 12:32, the first of this repository. Afte
 scripts/devlog.py as the reviewing session's byte for byte, the README saying how a repository runs
 it, DevlogTests making a one-commit scratch repository with git's identity given on the command line
 and reading the Done line the script writes, Python found as python3 or python and the test skipped
-with its reason where neither runs; 2 of 2 tests, the strict build clean. Both commits keep the
-form, the three-mark subject, one sentence, the owner's identity as author and committer, no trailer
-(N 7.2 and N 7.6 kept at the first commit); the library references no engine (N 2.1). The documents
-are the engines' with the engine's name replaced and the engine-only lines dropped, COMMITS.md the
-game's with N 7.1's pointer rule in place of the legacy branch line, .gitignore with the dump
-folder, .claude and .ref; AGENTS.md's devlog row carries no link until DEVLOG.md exists and its
-table of areas gains the rows item 2 adds. The skeleton sets ImportDirectoryBuildTargets false,
-since a submodule under modules/ would inherit an engine's Directory.Build.targets, makes a missing
-summary an error, loads the assembly by name in its one test, and build/version.sh prints 0.1.0; the
-strict build 0 warnings and 0 errors, the test passing. Before it `2340033`, the license alone, the
-owner's.
+with its reason where neither runs; 2 of 2 tests, the strict build clean. After it `321de49`, item
+3's second part, the run reader, pushed at 12:38, its run green at 12:41; scripts/run.py prints a
+run's jobs with their conclusions and times and, for a job that failed, timed out or was cancelled,
+the step it stopped at and the check run's annotations, writing the step's last 60 lines to a file
+under the folder given and printing the path, no log text reaching the terminal; the step is bounded
+by its own group header and the next, since steps carry whole-second times and the first version
+took the next step's header in; gh's escape flag added only where gh asks; the test reads recorded
+answers keyed by API path, so it skips only where Python is missing; 3 of 3 tests, the strict build
+clean. Both commits keep the form, the three-mark subject, one sentence, the owner's identity as
+author and committer, no trailer (N 7.2 and N 7.6 kept at the first commit); the library references
+no engine (N 2.1). The documents are the engines' with the engine's name replaced and the
+engine-only lines dropped, COMMITS.md the game's with N 7.1's pointer rule in place of the legacy
+branch line, .gitignore with the dump folder, .claude and .ref; AGENTS.md's devlog row carries no
+link until DEVLOG.md exists and its table of areas gains the rows item 2 adds. The skeleton sets
+ImportDirectoryBuildTargets false, since a submodule under modules/ would inherit an engine's
+Directory.Build.targets, makes a missing summary an error, loads the assembly by name in its one
+test, and build/version.sh prints 0.1.0; the strict build 0 warnings and 0 errors, the test passing.
+Before it `2340033`, the owner's first commit alone.
 
 ## Now
 
@@ -53,8 +60,8 @@ and every repository gains from it at once.
     a copy its build checks against the source. One commit a part, the tests coming with the code,
     the strict build and the suite green, a Shared line in the engines' REVIEW.md when a part lands.
     Items written by the reviewing session when item 2 is green and the owning session is free.
-    First part done at `7532128`, the devlog generator with its test; the run reader and the sheet
-    composer are the parts left.
+    First part done at `7532128`, the devlog generator with its test; Second part done at `321de49`,
+    the run reader; the sheet composer is the part left, from 3DEngine's session.
 
 4. **The engines take the module.** Each engine adds this repository as a git submodule under
 `modules/` and references its project, its workflows checking submodules out, its own folder for
@@ -89,8 +96,8 @@ it needs of a renderer, a world, a scheduler or a file system it takes through i
 declares, which each engine implements where it binds the module. A type of an engine's in this
 repository is a fault.
 
-4. **The license is the owner's choice.** The repository was made with the Mozilla Public License
-2.0, which stands; the owner may say otherwise.
+4. **The repository's terms are the owner's.** The repository was made by the owner with its terms
+   file in place, which stands as the owner set it and is spoken of nowhere else.
 
 5. **Who writes here.** The game's session writes items 1 and 2 for the six modules, being free
 while the game waits on the engine's package; the session that owns the code today moves it (item
